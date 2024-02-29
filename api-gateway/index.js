@@ -15,15 +15,15 @@ app.use(
 );
 
 app.use(
-    "/orders",
-    createProxyMiddleware({
-      target: "http://localhost:8081",
-      changeOrigin: true,
-      pathRewrite: {
-        "^/orders": "",
-      },
-    })
-  );
+  "/orders",
+  createProxyMiddleware({
+    target: "http://localhost:8081",
+    changeOrigin: true,
+    pathRewrite: {
+      "^/orders": "",
+    },
+  })
+);
 
 app.use(
   "/auth",
