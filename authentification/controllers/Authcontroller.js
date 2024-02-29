@@ -88,7 +88,7 @@ register = async (req, res) => {
         console.log(err);
       });
   }
-  res.redirect("/auth/login");
+  res.redirect("/auth/auth/login");
 };
 
 module.exports = { index, register, login, registerForm, loginForm };
