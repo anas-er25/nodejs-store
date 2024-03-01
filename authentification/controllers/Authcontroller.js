@@ -22,7 +22,9 @@ login = async (req, res) => {
         bcrypt.compare(password, user.password).then((isMatch) => {
           if (isMatch) {
             // Redirection avec les informations dans l'URL
-            res.redirect(`/products/?status=SUCCESS&message=User+logged+in+successfully&userId=${user._id}`);
+            res.redirect(
+              `/products/?status=SUCCESS&message=User+logged+in+successfully&userId=${user._id}`
+            );
           } else {
             res.json({
               status: "FAILED",
@@ -44,7 +46,6 @@ login = async (req, res) => {
       });
     });
 };
-
 
 registerForm = async (req, res) => {
   const locals = {
@@ -88,5 +89,6 @@ register = async (req, res) => {
   }
   res.redirect("/auth/auth/login");
 };
+
 
 module.exports = { index, register, login, registerForm, loginForm };

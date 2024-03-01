@@ -9,5 +9,4 @@ authrouter.post("/login", login);
 
 authrouter.get("/register", registerForm);
 authrouter.post("/register", register);
-
 module.exports = authrouter;
